@@ -1,0 +1,12 @@
+.todoInput{
+    width: 100%;
+}
+.todoButton_btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.todoInput_text{
+    position: relative;
+    width: 100%;
+}

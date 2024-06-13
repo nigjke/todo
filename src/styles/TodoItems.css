@@ -1,0 +1,4 @@
+.TodoItems{
+    display: flex;
+    flex-direction: column;
+}
