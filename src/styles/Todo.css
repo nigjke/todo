@@ -25,9 +25,15 @@
     border-radius: 50px;
     overflow: hidden;
 }
-@media(max-width: 1300px) { 
+@media (min-width: 421px) and (max-width: 1300px) { 
 #TodoItem{
     min-width: 0px;
     margin: 100px 50px;
 }
 }
+@media(max-width: 420px) { 
+    #TodoItem{
+        min-width: 0px;
+        margin: 100px 50px;
+    }
+    }
