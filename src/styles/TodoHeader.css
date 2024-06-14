@@ -1,5 +1,6 @@
-.todoHeader{
-    font-size: 32px;
+#todoHeader{
+    font-size: 72px;
     color: #38293b;
     font-weight: 700;
+    margin-bottom: 50px;
 }

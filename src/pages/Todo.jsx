@@ -21,8 +21,8 @@ export default function Todo() {
         <> 
             <CssBaseline />
                 <Grid item xs={6} md={8}>
-                    <Item className='TodoItem'>
-                        <Box className='TodoForm' sx={{ bgcolor: '#cfe8fc', height: '70vh',}}>
+                    <Item id='TodoItem'>
+                        <Box id='TodoForm' sx={{ bgcolor: '#cfe8fc', height: '70vh',}}>
                             <Box className='container'> 
                                 <Box className='TodoFormInner'>
                                     <TodoForm/>

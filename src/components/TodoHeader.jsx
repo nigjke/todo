@@ -4,7 +4,7 @@ import '../styles/TodoHeader.css';
 
 export default function TodoHeader() {
     return (
-        <Typography className='todoHeader' variant="h1" component="h2">
+        <Typography id='todoHeader' variant="h1" component="h2">
               Дневной список дел
         </Typography>
     )

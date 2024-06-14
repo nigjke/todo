@@ -4,6 +4,7 @@
     position: relative;
     align-items: center;
     width: 100%;
+    margin-top: 30px;
 }
 .actionsBox::before{
     content: '';
@@ -14,6 +15,6 @@
     top: -15px;
     left: 0;
 }
-.actionBtn{
+#actionBtn{
     color: #b0aaaa;
 }

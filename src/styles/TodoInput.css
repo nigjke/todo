@@ -3,10 +3,27 @@
 }
 .todoButton_btn{
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -315px;
+    top: -50px;
+    height: 45px;
+    width: 130px;
 }
 .todoInput_text{
     position: relative;
     width: 100%;
+}
+@media (min-width:900px) and (max-width: 1300px) { 
+    .todoButton_btn{
+        right: -267px;
+    }
+}
+@media (max-width:899px) {
+    .todoButton_btn{
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin: 20px 0;
+    }
+    
 }

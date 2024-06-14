@@ -8,7 +8,7 @@ export default function TodoActions() {
         <>
             <Box className='actionsBox'> 
                 <Typography variant="subtitle1">Завершено</Typography>
-                <Button className='actionBtn' variant="text">Очистить</Button>
+                <Button id ='actionBtn' variant="text">Очистить</Button>
             </Box>
         </>
     )

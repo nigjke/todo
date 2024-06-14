@@ -1,24 +1,33 @@
 .container{
-    max-width: 800px;
+    max-width: 870px;
     height: 100%;
     margin: 0 auto;
 }
-.TodoForm{
+#TodoForm{
     width: 100%;
     background-color: #ffffff;
+    height: auto;
 }
 .TodoFormInner{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 50px 15px 35px;
+    padding: 50px 50px 35px;
     height: 100%;
 }
-.TodoItem{
+#TodoItem{
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 1230px;
-    margin: 0 auto;
+    margin: 100px auto;
+    border-radius: 50px;
+    overflow: hidden;
+}
+@media(max-width: 1300px) { 
+#TodoItem{
+    min-width: 0px;
+    margin: 100px 50px;
+}
 }
