@@ -4,22 +4,22 @@ import Box from "@mui/material/Box";
 import '../styles/TodoActions.css';
 import { useEffect, useState, useMemo } from 'react';
 
-export default function TodoActions({todos, setTodos }) {
+export default function TodoActions({tasks, setTasks }) {
 
-    const [filteredTodos, setFilteredTodos] = useState([])
+    const [filteredTasks, setFilteredTasks] = useState([])
 
     useEffect(() => {
-        setFilteredTodos(todos.filter((todo) => todo.isReady))
-    }, [todos])
+        setFilteredTasks(tasks.filter((taskTodo) => taskTodo.isReady))
+    }, )
 
     const Clear = () => {
-        setTodos([]);
+        setTasks([]);
     }
 
     return(
         <>
             <Box className='actionsBox'> 
-                <Typography variant="subtitle1">Завершено {filteredTodos.length}/{todos.length}</Typography>
+                <Typography variant="subtitle1">Завершено {filteredTasks.length}/{tasks.length}</Typography>
                 <Button id ='actionBtn' onClick={Clear} variant="text">Очистить</Button>
             </Box>
         </>

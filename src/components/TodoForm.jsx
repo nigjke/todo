@@ -7,30 +7,29 @@ import TodoActions from './TodoActions';
 import { Box } from '@mui/material';
 
 export default function TodoForm() {
-    const [todos, setTodos] = useState([
-        {
-            text: 'fioewjfejoiw',
-            isReady: true
-        },
-        {
-            text: '2',
-            isReady: false
-        },
-        {
-            text: 'fioewjfejoiw',
-            isReady: true
-        },
-    ])
+    const [todo,setTodo] = useState('')
+    const [tasks,setTasks] = useState([])
 
+    const addTask = () => {
+        const taskTodo = {
+            id : Math.random,
+            text : todo,
+            isReady : false,
+        }
+        let newTask = [taskTodo, ...tasks]
+        setTasks(newTask)
+        setTodo('')
+    }
+console.log(tasks)
     return (
         <>
             <TodoHeader/>
             <Box className='todoInput' >
-                <TodoInput/>
-                <TodoButton/>
+                <TodoInput todo={todo} setTodo={setTodo}/>
+                <TodoButton addTask={addTask} />
             </Box>
-            <TodoItems todos={todos}/>
-            <TodoActions setTodos={setTodos} todos={todos}/>
+            <TodoItems setTasks={setTasks} tasks={tasks}/>
+            <TodoActions setTasks={setTasks} tasks={tasks}/>
         </>
     );
 }

@@ -4,6 +4,6 @@ import * as React from 'react';
 
 export default function TodoItem({ todo }) {
     return(
-        <FormControlLabel control={<Checkbox checked={todo.isReady} />} label={todo.text} />
+        <FormControlLabel control={<Checkbox checked={todo.isReady} />} label={todo.value} />
     );
 }
