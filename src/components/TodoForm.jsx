@@ -8,30 +8,30 @@ import { Box } from '@mui/material';
 import { v6 as uuidv6 } from 'uuid';
 
 export default function TodoForm() {
-    const [todo,setTodo] = useState('')
-    const [tasks,setTasks] = useState([])
+    const [todo, setTodo] = useState('');
+    const [tasks, setTasks] = useState([]);
 
     const addTask = () => {
         const taskTodo = {
-            id : uuidv6(),
-            text : todo,
-            isReady : false,
-        }
-        let newTask = [taskTodo, ...tasks]
-        setTasks(newTask)
-        setTodo('')
-    }
+            id: uuidv6(),
+            text: todo,
+            isReady: false,
+        };
+        let newTask = [taskTodo, ...tasks];
+        setTasks(newTask);
+        setTodo('');
+    };
 
-    console.log(tasks)
+    console.log(tasks);
     return (
         <>
-            <TodoHeader/>
-            <Box className='todoInput' >
-                <TodoInput todo={todo} setTodo={setTodo}/>
-                <TodoButton addTask={addTask} todo={todo}/>
+            <TodoHeader />
+            <Box className="todoInput">
+                <TodoInput todo={todo} setTodo={setTodo} />
+                <TodoButton addTask={addTask} todo={todo} />
             </Box>
-            <TodoItems setTasks={setTasks} tasks={tasks}/>
-            <TodoActions setTasks={setTasks} tasks={tasks}/>
+            <TodoItems setTasks={setTasks} tasks={tasks} />
+            <TodoActions setTasks={setTasks} tasks={tasks} />
         </>
     );
 }

@@ -1,14 +1,14 @@
-.container{
+.container {
     max-width: 870px;
     height: 100%;
     margin: 0 auto;
 }
-#TodoForm{
+#TodoForm {
     width: 100%;
     background-color: #ffffff;
     height: auto;
 }
-.TodoFormInner{
+.TodoFormInner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +16,7 @@
     padding: 50px 50px 35px;
     height: 100%;
 }
-#TodoItem{
+#TodoItem {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,15 +25,15 @@
     border-radius: 50px;
     overflow: hidden;
 }
-@media (min-width: 421px) and (max-width: 1300px) { 
-#TodoItem{
-    min-width: 0px;
-    margin: 100px 50px;
-}
-}
-@media(max-width: 420px) { 
-    #TodoItem{
+@media (min-width: 421px) and (max-width: 1300px) {
+    #TodoItem {
         min-width: 0px;
         margin: 100px 50px;
     }
+}
+@media (max-width: 420px) {
+    #TodoItem {
+        min-width: 0px;
+        margin: 100px 50px;
     }
+}

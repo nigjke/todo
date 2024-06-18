@@ -1,4 +1,4 @@
-.actionsBox{
+.actionsBox {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -6,7 +6,7 @@
     width: 100%;
     margin-top: 30px;
 }
-.actionsBox::before{
+.actionsBox::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -15,6 +15,6 @@
     top: -15px;
     left: 0;
 }
-#actionBtn{
+#actionBtn {
     color: #b0aaaa;
 }
