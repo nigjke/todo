@@ -10,7 +10,7 @@ export default function TodoActions({tasks, setTasks }) {
 
     useEffect(() => {
         setFilteredTasks(tasks.filter((taskTodo) => taskTodo.isReady))
-    }, )
+    }, [tasks])
 
     const Clear = () => {
         setTasks([]);

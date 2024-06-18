@@ -5,6 +5,7 @@ import TodoButton from './TodoButton';
 import TodoItems from './TodoItems';
 import TodoActions from './TodoActions';
 import { Box } from '@mui/material';
+import { v6 as uuidv6 } from 'uuid';
 
 export default function TodoForm() {
     const [todo,setTodo] = useState('')
@@ -12,7 +13,7 @@ export default function TodoForm() {
 
     const addTask = () => {
         const taskTodo = {
-            id : Math.random,
+            id : uuidv6(),
             text : todo,
             isReady : false,
         }
@@ -20,13 +21,14 @@ export default function TodoForm() {
         setTasks(newTask)
         setTodo('')
     }
-console.log(tasks)
+
+    console.log(tasks)
     return (
         <>
             <TodoHeader/>
             <Box className='todoInput' >
                 <TodoInput todo={todo} setTodo={setTodo}/>
-                <TodoButton addTask={addTask} />
+                <TodoButton addTask={addTask} todo={todo}/>
             </Box>
             <TodoItems setTasks={setTasks} tasks={tasks}/>
             <TodoActions setTasks={setTasks} tasks={tasks}/>
