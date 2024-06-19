@@ -1,14 +1,16 @@
-import * as React from 'react';
+import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import '../styles/TodoInput.css';
-import { useState } from 'react';
 
-export default function TodoInput({ todo, setTodo }) {
-    const [value, setValue] = useState('');
+export default function TodoInput(props) {
+    const { inputRef } = props;
+    const [todo, setTodo] = useState('');
 
-    const handleChangeValue = (e) => {
-        setValue(e.target.value);
+    const changeInputValue = (value) => {
+        setTodo(value);
+        inputRef.current = value;
     };
+
     return (
         <TextField
             id="outlined-basic"
@@ -16,7 +18,7 @@ export default function TodoInput({ todo, setTodo }) {
             value={todo}
             label="Добавить новый элемент"
             variant="outlined"
-            onChange={(e) => setTodo(e.target.value)}
+            onChange={(e) => changeInputValue(e.target.value)}
         />
     );
 }
