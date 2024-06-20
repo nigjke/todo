@@ -1,0 +1,13 @@
+.TodoItems {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px;
+}
+.checkbox {
+    border-radius: 50%;
+}
+@media (max-width: 899px) {
+    .TodoItems {
+        padding: 20px;
+    }
+}
