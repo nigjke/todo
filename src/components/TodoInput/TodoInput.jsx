@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import '../TodoInput/TodoInput.css';
 
@@ -10,6 +10,13 @@ export default function TodoInput(props) {
         setTodo(value);
         inputRef.current = value;
     };
+
+    useEffect(() => {
+        if (inputRef.current === '') {
+            setTodo('');
+        }
+    }, [inputRef.current]);
+
     return (
         <TextField
             id="outlined-basic"

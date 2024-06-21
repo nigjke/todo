@@ -19,6 +19,7 @@ export default function TodoForm() {
         };
         let newTask = [taskTodo, ...tasks];
         setTasks(newTask);
+        inputValue.current = '';
     };
 
     console.log(tasks);
