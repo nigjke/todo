@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import '../TodoActions/TodoActions.css';
 import { useEffect, useState } from 'react';
 
-export default function TodoActions({ tasks, setTasks }) {
+export default function TodoActions({ tasks, setTasks, setAlert }) {
     const [filteredTasks, setFilteredTasks] = useState([]);
 
     useEffect(() => {
@@ -13,6 +13,11 @@ export default function TodoActions({ tasks, setTasks }) {
 
     const Clear = () => {
         setTasks([]);
+        setAlert({
+            open: true,
+            content: 'Todo is clear!',
+            severity: 'success',
+        });
     };
 
     return (

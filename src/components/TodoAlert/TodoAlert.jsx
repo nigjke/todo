@@ -1,28 +1,34 @@
-import { Collapse, Alert, IconButton } from '@mui/material';
+import { Alert, IconButton, Snackbar } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import React from 'react';
 
-export default function TodoAlert() {
-    const [open, setOpen] = React.useState(true);
+export default function TodoAlert({ setAlert, alert }) {
+    const handleClose = () => {
+        setAlert((prev) => {
+            return { ...prev, open: false };
+        });
+    };
+
     return (
-        <Collapse in={open}>
+        <Snackbar
+            anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+            }}
+            open={alert.open}
+            onClose={handleClose}
+            autoHideDuration={5000}
+        >
             <Alert
+                severity={alert.severity}
                 action={
-                    <IconButton
-                        aria-label="close"
-                        color="inherit"
-                        size="small"
-                        onClick={() => {
-                            setOpen(false);
-                        }}
-                    >
+                    <IconButton aria-label="close" color="inherit" size="small" onClick={handleClose}>
                         <CloseIcon fontSize="inherit" />
                     </IconButton>
                 }
                 sx={{ mb: 2 }}
             >
-                Click the close icon to see the Collapse transition in action!
+                {alert.content}
             </Alert>
-        </Collapse>
+        </Snackbar>
     );
 }
