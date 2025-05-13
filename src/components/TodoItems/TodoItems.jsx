@@ -1,4 +1,4 @@
-import { Box, FormControlLabel, Checkbox } from '@mui/material';
+import { FormControlLabel, Checkbox, Box } from '@mui/material';
 import '../TodoItems/TodoItems.css';
 
 export default function TodoItems({ tasks, setTasks }) {
