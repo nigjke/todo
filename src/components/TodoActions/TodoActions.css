@@ -1,0 +1,20 @@
+.actionsBox {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.actionsBox::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #b0aaaa;
+    top: -15px;
+    left: 0;
+}
+#actionBtn {
+    color: #b0aaaa;
+}
